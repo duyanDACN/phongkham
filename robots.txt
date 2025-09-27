@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /wp-admin/admin-ajax.php 
+Disallow: /wp-admin/ 
+Disallow: *?s=
+Disallow: /search
+Disallow: */feed/*
+User-agent: Googlebot-Image
+User-agent: Googlebot-Mobile
+Allow: / 
+
+Sitemap: https://testsgn.clinic/
