@@ -9,3 +9,22 @@
  require get_stylesheet_directory() .'/inc/shortcode.php';
 //Add Action Theme Style
  require get_stylesheet_directory() .'/inc/action_style_theme.php';
+
+function setupThemeOption()
+ {
+   if (function_exists('acf_add_options_page')) {
+
+     acf_add_options_page([
+       'page_title'     => 'Option Theme',
+       'menu_title'     => 'Option Theme',
+       'menu_slug'     => 'acf-option-theme',
+       'redirect'        => false
+     ]);
+    //  acf_add_options_sub_page([
+    //    'page_title' => 'Option Single',
+    //    'menu_title' => 'Option Single',
+    //    'parent_slug' => 'acf-option-theme'
+    //  ]);
+   }
+ }
+ add_action('acf/init', 'setupThemeOption');

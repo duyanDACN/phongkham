@@ -40,3 +40,8 @@ function sc_related_posts_by_cat() {
     return $output;
 }
 add_shortcode('sc_related_posts', 'sc_related_posts_by_cat');
+
+function test() {
+    echo 'test nè';
+}
+add_shortcode('sc_test', 'test');
