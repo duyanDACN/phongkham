@@ -1,6 +1,6 @@
 <section class="clinic-section">
     <div class="container">
-        <?php 
+        <?php
         $title = get_field('clinic-title', 'option');
         $intro = get_field('clinic-intro', 'option');
         $list  = get_field('clinic-list', 'option');
@@ -25,7 +25,9 @@
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-           
+                <div class="btn-dang-ky">
+                    <a href="#popup-booking-form">Đăng ký</a>
+                </div>
             </div>
 
             <!-- Phần phải -->
@@ -47,6 +49,18 @@
         font-size: 40px;
         margin-bottom: 60px;
         color: #131e46;
+    }
+
+    .btn-dang-ky {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-dang-ky a {
+        padding: 8px 30px;
+        background: #131e46;
+        color: #fff;
+        border-radius: 8px;
     }
 
     /* Layout 2 cột */
@@ -146,5 +160,10 @@
         .clinic-right {
             margin-top: 13px;
         }
+
+        .btn-dang-ky {
+            margin-bottom: 20px;
+        }
+
     }
 </style>
