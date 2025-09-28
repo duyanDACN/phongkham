@@ -123,5 +123,18 @@ function hinhAnh() {
 }
 add_shortcode('sc_hinh_anh', 'hinhAnh');
 
+function form_dang_ky_tv() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/form-dang-ky.php')) {
+        get_template_part('/template-parts/shortcode/form-dang-ky');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_form_dk', 'form_dang_ky_tv');
+
+
+
 
 
