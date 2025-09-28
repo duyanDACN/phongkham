@@ -134,6 +134,28 @@ function form_dang_ky_tv() {
 }
 add_shortcode('sc_form_dk', 'form_dang_ky_tv');
 
+function arcodition() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/arcodition.php')) {
+        get_template_part('/template-parts/shortcode/arcodition');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_arcodition', 'arcodition');
+
+function khuyenMai() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/khuyen-mai.php')) {
+        get_template_part('/template-parts/shortcode/khuyen-mai');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_khuyen_mai', 'khuyenMai');
+
 
 
 

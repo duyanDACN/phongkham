@@ -1,0 +1,77 @@
+{
+    "key": "group_promotions",
+    "title": "Khuyến mãi",
+    "fields": [
+        {
+            "key": "field_promotion_boxes",
+            "label": "Promotion Boxes",
+            "name": "promotion_boxes",
+            "type": "repeater",
+            "instructions": "Danh sách các khuyến mãi",
+            "required": 0,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Thêm khuyến mãi",
+            "sub_fields": [
+                {
+                    "key": "field_promotion_name",
+                    "label": "Tên khuyến mãi",
+                    "name": "promotion_name",
+                    "type": "text",
+                    "instructions": "Tên của khuyến mãi",
+                    "required": 1,
+                    "default_value": "",
+                    "placeholder": "Khuyến mãi A",
+                    "maxlength": "",
+                    "rows": ""
+                },
+                {
+                    "key": "field_promotion_items",
+                    "label": "Danh sách chi tiết",
+                    "name": "promotion_items",
+                    "type": "repeater",
+                    "instructions": "Các chi tiết hiển thị trong ul li",
+                    "required": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Thêm chi tiết",
+                    "sub_fields": [
+                        {
+                            "key": "field_promotion_item_text",
+                            "label": "Chi tiết",
+                            "name": "item_text",
+                            "type": "text",
+                            "instructions": "Text hiển thị trong li",
+                            "required": 1,
+                            "default_value": "",
+                            "placeholder": "Giảm 50% tất cả sản phẩm",
+                            "maxlength": "",
+                            "rows": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}
