@@ -112,3 +112,16 @@ function doiTac() {
 }
 add_shortcode('sc_doi_tac', 'doiTac');
 
+function hinhAnh() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/hinh-anh.php')) {
+        get_template_part('/template-parts/shortcode/hinh-anh');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_hinh_anh', 'hinhAnh');
+
+
+

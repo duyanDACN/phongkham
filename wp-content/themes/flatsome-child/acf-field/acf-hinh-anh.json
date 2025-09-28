@@ -1,0 +1,45 @@
+{
+    "key": "group_image_page_options",
+    "title": "Slide hình ảnh",
+    "fields": [
+        {
+            "key": "field_image_page",
+            "label": "Gallery Images",
+            "name": "image_page",
+            "type": "gallery",
+            "instructions": "Thêm ảnh cho gallery",
+            "required": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-option-theme"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+}
