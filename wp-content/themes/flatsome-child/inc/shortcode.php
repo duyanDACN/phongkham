@@ -89,3 +89,26 @@ function bacSi() {
     return ob_get_clean();
 }
 add_shortcode('sc_bac_si', 'bacSi');
+
+function giayPhepHoatDong() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/giay-phep.php')) {
+        get_template_part('/template-parts/shortcode/giay-phep');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_giay_phep', 'giayPhepHoatDong');
+
+function doiTac() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/doi-tac.php')) {
+        get_template_part('/template-parts/shortcode/doi-tac');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_doi_tac', 'doiTac');
+
