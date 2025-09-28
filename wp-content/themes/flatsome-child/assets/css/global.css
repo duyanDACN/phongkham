@@ -1042,6 +1042,11 @@ h1.page-title.is-large.uppercase{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.section-accordion .accordion-inner {
+  padding: 1em 20px !important;
+  text-align: justify !important;
+}
+
 
 /* end menu mobile */
 @media only screen and (max-width: 850px) {
@@ -1094,3 +1099,4 @@ h1.page-title.is-large.uppercase{
       text-transform: capitalize;
     }
 /* end menu mobile */
+  }
