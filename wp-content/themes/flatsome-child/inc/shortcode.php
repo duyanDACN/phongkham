@@ -78,3 +78,14 @@ function cauHoi() {
     return ob_get_clean();
 }
 add_shortcode('sc_cau_hoi', 'cauHoi');
+
+function bacSi() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/bac-si.php')) {
+        get_template_part('/template-parts/shortcode/bac-si');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_bac_si', 'bacSi');

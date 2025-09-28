@@ -1,0 +1,75 @@
+{
+    "key": "group_doctor_repeater",
+    "title": "Danh sách bác sĩ",
+    "fields": [
+        {
+            "key": "field_doctor_repeater",
+            "label": "Danh sách bác sĩ",
+            "name": "doctor_repeater",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Thêm bác sĩ",
+            "sub_fields": [
+                {
+                    "key": "field_doctor_image",
+                    "label": "Ảnh",
+                    "name": "doctor_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_doctor_name",
+                    "label": "Tên bác sĩ",
+                    "name": "doctor_name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_doctor_rating",
+                    "label": "Đánh giá",
+                    "name": "doctor_rating",
+                    "type": "text"
+                },
+                {
+                    "key": "field_doctor_visits",
+                    "label": "Lượt khám",
+                    "name": "doctor_visits",
+                    "type": "text"
+                },
+                {
+                    "key": "field_doctor_specialty",
+                    "label": "Chuyên môn",
+                    "name": "doctor_specialty",
+                    "type": "text"
+                },
+                {
+                    "key": "field_doctor_price",
+                    "label": "Giá",
+                    "name": "doctor_price",
+                    "type": "text"
+                },
+                {
+                    "key": "field_doctor_role",
+                    "label": "Chức danh",
+                    "name": "doctor_role",
+                    "type": "text"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-option-theme"
+            }
+        ]
+    ],
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}
