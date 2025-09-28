@@ -56,3 +56,25 @@ function gioiThieu() {
     return ob_get_clean();
 }
 add_shortcode('sc_gioi_thieu', 'gioiThieu');
+
+function taiSaoChon() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/tai-sao-chon.php')) {
+        get_template_part('/template-parts/shortcode/tai-sao-chon');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_tai_sao_chon', 'taiSaoChon');
+
+function cauHoi() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/cau-hoi.php')) {
+        get_template_part('/template-parts/shortcode/cau-hoi');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_cau_hoi', 'cauHoi');

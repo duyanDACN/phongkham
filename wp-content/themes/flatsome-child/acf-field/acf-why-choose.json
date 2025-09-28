@@ -1,0 +1,85 @@
+{
+    "key": "group_why_choose_section",
+    "title": "Why Choose Section",
+    "fields": [
+        {
+            "key": "field_why_choose_title",
+            "label": "Title Why Choose",
+            "name": "why_choose_title",
+            "type": "text",
+            "instructions": "Nhập tiêu đề cho section",
+            "required": 0
+        },
+        {
+            "key": "field_why_choose_desc",
+            "label": "Mô tả",
+            "name": "why_choose_desc",
+            "type": "wysiwyg",
+            "instructions": "Nhập mô tả cho section (có thể chỉnh màu, in đậm, in nghiêng…)",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_why_choose_items",
+            "label": "Danh sách dịch vụ",
+            "name": "why_choose_items",
+            "type": "repeater",
+            "instructions": "Thêm các dịch vụ cho phần bên phải",
+            "required": 0,
+            "sub_fields": [
+                {
+                    "key": "field_why_choose_item_title",
+                    "label": "Tiêu đề dịch vụ",
+                    "name": "why_choose_item_title",
+                    "type": "text",
+                    "required": 0
+                },
+                {
+                    "key": "field_why_choose_item_image",
+                    "label": "Hình ảnh",
+                    "name": "why_choose_item_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "required": 0
+                },
+                {
+                    "key": "field_why_choose_item_content",
+                    "label": "Nội dung",
+                    "name": "why_choose_item_content",
+                    "type": "wysiwyg",
+                    "instructions": "Nhập nội dung mô tả cho dịch vụ (có thể chỉnh màu, in đậm, in nghiêng…)",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "required": 0
+                }
+            ],
+            "min": 0,
+            "layout": "block",
+            "button_label": "Thêm dịch vụ"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-option-theme"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field cho section Why Choose"
+}
