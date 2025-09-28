@@ -45,3 +45,14 @@ function test() {
     echo 'test nè';
 }
 add_shortcode('sc_test', 'test');
+
+function gioiThieu() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/gioi-thieu.php')) {
+        get_template_part('/template-parts/shortcode/gioi-thieu');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_gioi_thieu', 'gioiThieu');

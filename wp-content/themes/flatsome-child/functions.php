@@ -9,6 +9,7 @@
  require get_stylesheet_directory() .'/inc/shortcode.php';
 //Add Action Theme Style
  require get_stylesheet_directory() .'/inc/action_style_theme.php';
+ require_once get_stylesheet_directory() . '/inc/RegisterACFLocalJson.php';
 
 function setupThemeOption()
  {

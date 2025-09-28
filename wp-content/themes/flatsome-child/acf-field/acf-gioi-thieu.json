@@ -1,0 +1,53 @@
+{
+    "key": "group_clinic_info",
+    "title": "PHÒNG KHÁM TESTSGN",
+    "fields": [
+        {
+            "key": "field_clinic_title",
+            "label": "Title",
+            "name": "clinic-title",
+            "type": "text"
+        },
+        {
+            "key": "field_clinic_intro",
+            "label": "Mô tả",
+            "name": "clinic-intro",
+            "type": "text"
+        },
+        {
+            "key": "field_clinic_list",
+            "label": "Danh sách",
+            "name": "clinic-list",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_clinic_list_item",
+                    "label": "Nội dung",
+                    "name": "item",
+                    "type": "text"
+                }
+            ],
+            "min": 0,
+            "layout": "row",
+            "button_label": "Thêm mục"
+        },
+        {
+            "key": "field_clinic_image",
+            "label": "Ảnh",
+            "name": "clinic-image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-option-theme"
+            }
+        ]
+    ]
+}
