@@ -8,7 +8,7 @@ $items = get_field('why_choose_items', 'option');
     <div class="why-choose-row">
       <!-- Phần trái -->
       <div class="why-choose-left">
-        <h2 class="why-choose-title"><?php echo esc_html($title); ?></h2>
+        <h2 class="why-choose-title"><?php echo esc_html($title); ?> <span class="title-2">Test SGN</span></h2>
         <div class="why-choose-text">
           <?php echo $desc; // WYSIWYG, giữ HTML ?>
         </div>
@@ -43,6 +43,10 @@ $items = get_field('why_choose_items', 'option');
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+  }
+
+  .title-2 {
+    color: #C70039;
   }
 
   .why-choose-left,
