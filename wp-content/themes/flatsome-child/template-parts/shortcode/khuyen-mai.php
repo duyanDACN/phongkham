@@ -3,14 +3,26 @@
         <h2 class="promotion-title">Khuyến mãi chính</h2>
 
         <!-- PHẦN MỚI THÊM -->
+         <div class="container-header-extra">
         <div class="promotion-header-extra">
             <div class="promotion-left">
+                    <div class="tit-head-mb">
                 <div class="promo-line-1">XÉT NGHIỆM HIV</div>
                 <div class="promo-line-2">MIỄN PHÍ</div>
+                </div>
+                <!-- Đưa nút xuống dưới -->
+                 <div class="promotion-btn-mb">
+                <a href="#form-tu-van" class="promotion-btn promo-btn-header promo-btn-under">Đăng ký ngay</a>
+                </div>
             </div>
             <div class="promotion-right">
-                <a href="#form-tu-van" class="promotion-btn promo-btn-header">Đăng ký ngay</a>
+                <?php $image_header = get_field('promotion_image_header','option')?>
+                <!-- Thêm ảnh tạm (link ảnh còn hoạt động) -->
+                <img src="<?php echo $image_header['url']?>"
+                    alt="Khuyến mãi xét nghiệm"
+                    class="promotion-right-image">
             </div>
+        </div>
         </div>
         <!-- KẾT THÚC PHẦN MỚI -->
 
@@ -31,7 +43,7 @@
                             <div class="swiper-slide promotion-box">
                                 <!-- HÌNH ẢNH THÊM MỚI -->
                                 <div class="promotion-image">
-                                    <img src="<?php echo $pro_image['url']?>" alt="<?php echo $pro_image['alt']?>" />
+                                    <img src="<?php echo $pro_image['url'] ?>" alt="<?php echo $pro_image['alt'] ?>" />
                                 </div>
                                 <!-- HẾT HÌNH ẢNH -->
 
@@ -85,7 +97,7 @@
 
     .row-btn-km {
         display: flex;
-        gap: 12px;
+        gap: 20px;
         justify-content: center;
     }
 
@@ -93,21 +105,29 @@
         padding: 10px;
     }
 
+    .container-header-extra {
+        padding: 0 10px;
+    }
+
     .promotion-title {
         text-align: center;
         font-size: 40px;
-        margin-bottom: 20px;
-        color: #131e46;
+        margin-bottom: 50px;
+        color: #0073e6;
         font-weight: bold;
     }
 
     /* --- PHẦN MỚI --- */
     .promotion-header-extra {
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         flex-wrap: wrap;
+        border-radius: 14px;
+        /* background: #7cbeff; */
+        box-shadow: 0 2px 8px rgba(0, 115, 230, 0.4);
     }
 
     .promotion-left {
@@ -116,15 +136,15 @@
     }
 
     .promo-line-1 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
-        color: #131e46;
+        color: #090e21;
     }
 
     .promo-line-2 {
-        font-size: 60px;
+        font-size: 45px;
         font-weight: 800;
-        color: #c70039;
+        color: #0073e6;
         margin-top: 4px;
     }
 
@@ -134,10 +154,10 @@
     }
 
     .promo-btn-header {
-        font-size: 18px;
-        padding: 10px 24px;
+        font-size: 21px;
+        padding: 17px 24px;
         border-radius: 8px;
-        background-color: #131e46;
+        background-color: #0073e6;
         color: #fff;
         text-decoration: none;
         font-weight: 600;
@@ -145,7 +165,7 @@
     }
 
     .promo-btn-header:hover {
-        background-color: #c70039;
+        background-color: #005bb5;
         color: #fff;
     }
 
@@ -166,16 +186,17 @@
     .price {
         padding: 14px 0px;
         font-weight: 700;
+        color: #fff;
     }
 
     .price-before {
-        color: #df1111;
+        color: #fff;
         text-decoration: line-through;
         font-weight: bold;
     }
 
     .price-after {
-        color: #001F3F;
+        color: #fff;
         font-weight: bold;
     }
 
@@ -184,13 +205,28 @@
         margin-top: 15px;
         padding: 9px 17px;
         font-size: 18px;
-        background-color: #0073e6;
-        color: #fff;
+        background-color: #fff;
+        color: #090e21;
         font-weight: 600;
         text-decoration: none;
         border-radius: 6px;
         transition: background-color 0.3s;
         cursor: pointer;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 115, 230, 0.4);
+        }
+
+        50% {
+            transform: scale(1.06);
+            box-shadow: 0 0 15px rgba(0, 115, 230, 0.4);
+        }
     }
 
     .btn-dk-km a:hover {
@@ -224,8 +260,8 @@
     .promotion-box {
         padding: 1.5rem;
         border-radius: 8px;
-        box-shadow: 0 2px 3px rgb(19 30 70);
-        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 115, 230, 0.4);
+        background: #0073e6;
         min-height: 575px;
         transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -237,28 +273,29 @@
 
     .promotion-subtitle {
         font-size: 30px;
-        color: #C70039;
+        color: #fff;
         font-weight: 600;
         margin-bottom: 0;
         text-align: left;
     }
 
     .title-2-pro {
-        margin-bottom: 20px;
-        font-size: 25px;
-        color: #C70039;
+        font-size: 26px;
+        color: #fff;
         font-weight: 600;
         text-align: left;
     }
 
     .promotion-list {
-        min-height: 250px;
+        min-height: 225px;
+        margin-bottom: 0;
     }
 
     .promotion-list li {
         display: flex;
         font-size: 17px;
         font-weight: 400;
+        color: #fff;
     }
 
     .promotion-list li svg {
@@ -267,27 +304,63 @@
     }
 
     .promotion-list li {
-    display: flex;
-    align-items: center; /* canh giữa icon và chữ theo chiều dọc */
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 6px;
-}
+        display: flex;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
 
-.promotion-list li svg {
-    flex-shrink: 0; /* không bị co lại */
-    width: 18px; /* cố định kích thước icon */
-    height: 18px;
-    margin-right: 8px;
-    fill: green; /* đảm bảo màu icon đồng nhất */
-}
+    .promotion-list li svg {
+        flex-shrink: 0;
+        /* không bị co lại */
+        width: 18px;
+        /* cố định kích thước icon */
+        height: 18px;
+        margin-right: 8px;
+        fill: #fff;
+        /* đảm bảo màu icon đồng nhất */
+    }
+
+    /* Đưa nút xuống dưới và căn giữa theo layout */
+    .promo-btn-under {
+        display: inline-block;
+        font-size: 21px;
+        padding: 14px 24px;
+        border-radius: 8px;
+        background-color: #0073e6;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+    .promo-btn-under:hover {
+        background-color: #005bb5;
+    }
+
+    /* Ảnh bên phải */
+    .promotion-right-image {
+        height: 200px;
+        width: 300px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
     /* Responsive */
     @media(max-width: 768px) {
         .promotion-header-extra {
             flex-direction: column;
             text-align: center;
+        }
+
+        .title-2-pro {
+            font-size: 22px;
+        }
+
+
+        .promotion-section {
+            padding: 0px 0 20px;
         }
 
         .promotion-left,
@@ -300,7 +373,7 @@
         }
 
         .promo-line-2 {
-            font-size: 35px;
+            font-size: 33px;
         }
 
         .promotion-right {
@@ -309,7 +382,8 @@
 
         .promotion-title {
             font-size: 30px;
-            margin-top: 30px;
+            padding-top: 30px;
+            margin-bottom: 30px;
         }
 
         .promotion-header-extra {
@@ -328,6 +402,63 @@
         .promotion-right {
             text-align: right;
         }
+
+        .btn-dk-km a {
+            font-size: 16px;
+        }
+
+        .promotion-image {
+            margin-bottom: 20px;
+        }
+
+        .promotion-image img {
+            height: 220px;
+        }
+
+        .promotion-subtitle {
+            font-size: 28px;
+        }
+
+        .promotion-list li {
+            font-size: 16px;
+        }
+
+        .promotion-header-extra {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .promotion-right {
+            margin-top: 20px;
+        }
+
+        .promotion-right-image {
+            width: 100%;
+        }
+
+        .container-header-extra {
+            padding: 0;
+        }
+
+        .promotion-header-extra {
+            padding: 0;
+            box-shadow :none;
+        }
+
+        .promotion-left {
+            display: flex;
+            text-align: left;
+            justify-content: space-between;   
+            align-items: center;
+        }
+
+        .promo-btn-under {
+            font-size: 19px;
+            padding: 12px 18px;
+        }
+
+
     }
 </style>
 
