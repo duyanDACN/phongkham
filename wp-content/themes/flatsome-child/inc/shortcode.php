@@ -156,6 +156,28 @@ function khuyenMai() {
 }
 add_shortcode('sc_khuyen_mai', 'khuyenMai');
 
+function phuongPhap() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/suc-khoe-tinh-than/phuong-phap.php')) {
+        get_template_part('/template-parts/shortcode/suc-khoe-tinh-than/phuong-phap');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_phuong_phap', 'phuongPhap');
+
+function viSao() {
+    ob_start();
+    if (locate_template('/template-parts/shortcode/suc-khoe-tinh-than/vi-sao.php')) {
+        get_template_part('/template-parts/shortcode/suc-khoe-tinh-than/vi-sao');
+    } else {
+        echo __('Template not found', 'textdomain');
+    }
+    return ob_get_clean();
+}
+add_shortcode('sc_vi_sao', 'viSao');
+
 
 
 
