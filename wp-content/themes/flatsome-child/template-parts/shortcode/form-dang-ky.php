@@ -1,19 +1,19 @@
 <?php
-$is_combo_thuoc = is_page('combo-thuoc');
+$use_combo_form = is_page(array('combo-thuoc', 'lien-he'));
 
 // Lấy field theo v1 / v2
 $title_tieu_chi = get_field(
-    $is_combo_thuoc ? 'title_tieu_chi_v2' : 'title_tieu_chi',
+    $use_combo_form ? 'title_tieu_chi_v2' : 'title_tieu_chi',
     'option'
 );
 
 $anh_form = get_field(
-    $is_combo_thuoc ? 'anh_form_v2' : 'anh_form',
+    $use_combo_form ? 'anh_form_v2' : 'anh_form',
     'option'
 );
 
 $danh_sach_tieu_chi = get_field(
-    $is_combo_thuoc ? 'danh_sach_tieu_chi_v2' : 'danh_sach_tieu_chi',
+    $use_combo_form ? 'danh_sach_tieu_chi_v2' : 'danh_sach_tieu_chi',
     'option'
 );
 ?>
@@ -36,7 +36,7 @@ $danh_sach_tieu_chi = get_field(
                     <ul class="content-list">
                         <?php foreach ($danh_sach_tieu_chi as $item): ?>
                             <?php
-                            $text = $is_combo_thuoc
+                            $text = $use_combo_form
                                 ? ($item['tieu_chi_text_v2'] ?? '')
                                 : ($item['tieu_chi_text'] ?? '');
                             ?>
